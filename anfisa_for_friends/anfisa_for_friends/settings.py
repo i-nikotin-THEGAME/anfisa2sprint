@@ -1,5 +1,9 @@
+
 from pathlib import Path
 from django.utils.translation import gettext_lazy as _
+import django_stubs_ext
+# Monkeypatch для поддержки дженериков в Django-классах
+django_stubs_ext.monkeypatch()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
